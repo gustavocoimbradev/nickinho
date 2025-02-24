@@ -19,7 +19,7 @@ export default function Chat() {
     setMessages((prev) => [...prev, userMessage]);
     setText("");
     const botResponse = await requestAnswer(text);
-    setMessages((prev) => [...prev, { from: "bot", text: botResponse }]);
+    setMessages((prev) => [...prev, { from: "bot", text: botResponse.replace(/<think>.*?<\/think>/g, "") }]);
   };
 
   const requestAnswer = async (text: string) => {
@@ -74,7 +74,7 @@ export default function Chat() {
           </button>
         </form>
       </div>
-      <small className="mt-6 text-indigo-100 text-sm text-center">Desenvolvido por <a className="font-bold" target="_blank" href="https://youtube.com/nick3301">Nick</a> | Modelo utilizado: <a className="font-bold" href="https://www.llama.com/" target="_blank">llama-3.3-70b-versatile</a></small>
+      <small className="mt-6 text-indigo-100 text-sm text-center">Desenvolvido por <a className="font-bold" target="_blank" href="https://youtube.com/nick3301">Nick</a> | Modelo utilizado: <a className="font-bold" href="https://www.llama.com/" target="_blank">deepseek-r1-distill-llama-70b</a></small>
     </div>
   );
 }
