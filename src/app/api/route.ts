@@ -20,6 +20,6 @@ export async function POST(req: Request) {
 
         return NextResponse.json(data);
     } catch (error) {
-        return NextResponse.json({ error: 'Erro no servidor' }, { status: 500 });
+        return NextResponse.json({ error: error }, { status: 500 });
     }
 }

@@ -60,7 +60,7 @@ export default function Chat() {
   return (
     <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-indigo-400">
       <h1 className="mb-4 text-indigo-100 font-bold text-5xl text-center">Nickinho</h1>
-      <h4 className="mb-6 text-indigo-100 text-md text-center">"Inteligência" artificial mais "confiável" da Internet</h4>
+      <h4 className="mb-6 text-indigo-100 text-md text-center">&ldquo;Inteligência&ldquo; artificial mais &ldquo;confiável&ldquo; da Internet</h4>
       <div className="bg-indigo-200 rounded-2xl overflow-hidden shadow-sm h-[400px] w-[700px] max-w-[90%] flex flex-col">
         <div className="flex-1 p-4 flex flex-col gap-2 overflow-y-auto" ref={messagesRef}>
           {messages.map((msg, index)=>(
