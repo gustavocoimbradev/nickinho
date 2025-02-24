@@ -27,9 +27,17 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
-        <Script id="_waustats">
-          {`var _wau = _wau || []; _wau.push(["tab", "nickinho", "33u", "left-middle"]);`}
-        </Script>
+        <Script
+        id="wau-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var _wau = _wau || [];
+              _wau.push(["tab", "1iypwe8w2b", "33u", "left-middle"]);
+            `,
+          }}
+        />
+        <Script id="wau-external" src="//waust.at/t.js" strategy="lazyOnload" async />
       </body>
     </html>
   );
