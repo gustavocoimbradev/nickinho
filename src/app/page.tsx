@@ -17,8 +17,10 @@ export default function Chat() {
     if (!text.trim()) return;
     const userMessage = { from: "human", text };
     setMessages((prev) => [...prev, userMessage]);
+    setMessages((prev) => [...prev, { from: "bot", text: '...' }]);
     setText("");
     const botResponse = await requestAnswer(text);
+    setMessages((prev) => prev.slice(0, -1)); 
     setMessages((prev) => [...prev, { from: "bot", text: botResponse }]);
   };
 
@@ -47,9 +49,11 @@ export default function Chat() {
   };
 
   useEffect(() => {
+    setMessages((prev) => [...prev, { from: "bot", text: '...' }]);
     (async () => {
       const initialMessage = `${process.env.INSTRUCTIONS} Olá`;
       const botResponse = await requestAnswer(initialMessage);
+      setMessages((prev) => prev.slice(0, -1)); 
       setMessages((prev) => [...prev, { from: "bot", text: botResponse }]);
     })();
   }, []);
