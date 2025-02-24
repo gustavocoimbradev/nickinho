@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { useEffect } from "react";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -14,11 +15,15 @@ export const metadata: Metadata = {
   description: "“Inteligência“ artificial mais “confiável“ da Internet"
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//waust.at/t.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <html lang="pt-br">
       <head>
@@ -29,7 +34,6 @@ export default function RootLayout({
         <Script id="_waustats">
           {`var _wau = _wau || []; _wau.push(["tab", "nickinho", "33u", "left-middle"]);`}
         </Script>
-        <Script src="//waust.at/t.js" strategy="afterInteractive" />
       </body>
     </html>
   );
