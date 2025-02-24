@@ -75,8 +75,7 @@ export default function Chat() {
           </button>
         </form>
       </div>
-      <small className="mt-6 text-indigo-100 text-sm text-center max-w-[90%]">Desenvolvido por <a className="font-bold" target="_blank" href="https://youtube.com/nick3301">Nick</a> | Modelo utilizado: <a className="font-bold" href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B" target="_blank">deepseek-r1-distill-llama-70b</a></small>
-      <small className="mt-6 text-indigo-700 p-2 px-4 rounded-full bg-indigo-100 text-sm text-center max-w-[90%]">www.nickinho.com</small>
+      <small className="mt-6 text-indigo-100 text-sm text-center max-w-[90%]">www.nickinho.com</small>
     </div>
   );
 }
