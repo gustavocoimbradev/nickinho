@@ -6,7 +6,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-body > div:first-of-type {
+div[title="Click to see what's popular on this site!"] {
   opacity: 0;
   pointer-events: none;
 }
