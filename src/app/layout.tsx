@@ -33,7 +33,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               var _wau = _wau || [];
-              _wau.push(["tab", "1iypwe8w2b", "33u", "left-middle"]);
+              _wau.push(["tab", "nickinho", "33u", "left-middle"]);
             `,
           }}
         />
