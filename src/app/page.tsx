@@ -60,8 +60,8 @@ export default function Chat() {
 
   return (
     <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-indigo-400">
-      <h1 className="mb-4 text-indigo-100 font-bold text-5xl text-center">Nickinho</h1>
-      <h4 className="mb-6 text-indigo-100 text-md text-center">&ldquo;Inteligência&ldquo; artificial mais &ldquo;confiável&ldquo; da Internet</h4>
+      <h1 className="mb-4 text-indigo-100 font-bold text-5xl text-center max-w-[90%]">Nickinho</h1>
+      <h4 className="mb-6 text-indigo-100 text-md text-center max-w-[90%]">&ldquo;Inteligência&ldquo; artificial mais &ldquo;confiável&ldquo; da Internet</h4>
       <div className="bg-indigo-200 rounded-2xl overflow-hidden shadow-sm h-[400px] w-[700px] max-w-[90%] flex flex-col">
         <div className="flex-1 p-4 flex flex-col gap-2 overflow-y-auto" ref={messagesRef}>
           {messages.map((msg, index)=>(
@@ -75,8 +75,8 @@ export default function Chat() {
           </button>
         </form>
       </div>
-      <small className="mt-6 text-indigo-100 text-sm text-center">Desenvolvido por <a className="font-bold" target="_blank" href="https://youtube.com/nick3301">Nick</a> | Modelo utilizado: <a className="font-bold" href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B" target="_blank">deepseek-r1-distill-llama-70b</a></small>
-      <small className="mt-6 text-indigo-700 p-2 px-4 rounded-full bg-indigo-100 text-sm text-center">www.nickinho.com</small>
+      <small className="mt-6 text-indigo-100 text-sm text-center max-w-[90%]">Desenvolvido por <a className="font-bold" target="_blank" href="https://youtube.com/nick3301">Nick</a> | Modelo utilizado: <a className="font-bold" href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B" target="_blank">deepseek-r1-distill-llama-70b</a></small>
+      <small className="mt-6 text-indigo-700 p-2 px-4 rounded-full bg-indigo-100 text-sm text-center max-w-[90%]">www.nickinho.com</small>
     </div>
   );
 }
