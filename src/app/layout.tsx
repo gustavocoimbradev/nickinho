@@ -15,15 +15,12 @@ export const metadata: Metadata = {
   description: "“Inteligência“ artificial mais “confiável“ da Internet"
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "//waust.at/t.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  
   return (
     <html lang="pt-br">
       <head>
