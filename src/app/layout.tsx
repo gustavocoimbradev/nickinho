@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -24,6 +26,10 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
+        <Script id="_waustats">
+          {`var _wau = _wau || []; _wau.push(["tab", "nickinho", "33u", "left-middle"]);`}
+        </Script>
+        <Script src="//waust.at/t.js" strategy="afterInteractive" />
       </body>
     </html>
   );
