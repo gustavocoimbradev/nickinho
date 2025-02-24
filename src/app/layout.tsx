@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Nickinho",
-  description: "\"Inteligência\" artificial",
+  description: "“Inteligência“ artificial mais “confiável“ da Internet"
 };
 
 export default function RootLayout({
@@ -19,6 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <head>
+        <meta name="theme-color" content="#818cf8" />
+      </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
       </body>
