@@ -5,3 +5,8 @@
 body {
   font-family: 'Inter', sans-serif;
 }
+
+body > div:first-of-type {
+  opacity: 0;
+  pointer-events: none;
+}
